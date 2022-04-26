@@ -1,0 +1,31 @@
+# kill -SIGUSR1 $(pidof sxhkd) to tell sxkhd to reload its configuration file
+
+# Volume
+XF86AudioMute
+	pamixer -t; kill -39 $(pidof dwmblocks)
+
+XF86AudioLowerVolume
+	pamixer -d 5; kill -39 $(pidof dwmblocks)
+
+shift + XF86AudioLowerVolume
+	pamixer --set-volume 5; kill -39 $(pidof dwmblocks)
+
+XF86AudioRaiseVolume
+	pamixer -i 5; kill -39 $(pidof dwmblocks)
+
+shift + XF86AudioRaiseVolume
+	pamixer --set-volume 100; kill -39 $(pidof dwmblocks)
+
+
+# Display brightness
+XF86MonBrightnessDown
+	pkexec /usr/bin/brillo -u 25000 -q -U 5; kill -41 $(pidof dwmblocks)
+
+shift + XF86MonBrightnessDown
+	pkexec /usr/bin/brillo -u 25000 -q -S $(brillo -G -c); kill -41 $(pidof dwmblocks)
+
+XF86MonBrightnessUp
+	pkexec /usr/bin/brillo -u 25000 -q -A 5; kill -41 $(pidof dwmblocks)
+
+shift + XF86MonBrightnessUp
+	pkexec /usr/bin/brillo -u 25000 -q -S $(brillo -G -m); kill -41 $(pidof dwmblocks)
