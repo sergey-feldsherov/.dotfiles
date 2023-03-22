@@ -1,6 +1,14 @@
 # .dotfiles
 
-Not synced:
+Stowed:
+* nvim
 * sxhkd
-* xinitrc
-* bash-__something__
+* xinitrc (for some reason)
+* git (credentials and some settings)
+* kitty
+* tmux
+* guake
+* htop (for fun)
+
+Not synced:
+* dunno
