@@ -22,6 +22,8 @@ vim.g.mapleader = " "
 vim.g.maplocalleader = "\\"
 vim.keymap.set("n", "<leader>pv", vim.cmd.Ex)
 
+vim.g.netrw_bufsettings = 'noma nomod nu nowrap ro nobl'
+
 vim.opt.number = true
 vim.opt.relativenumber = true
 
