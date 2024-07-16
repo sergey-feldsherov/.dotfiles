@@ -22,6 +22,7 @@ vim.g.mapleader = " "
 vim.g.maplocalleader = "\\"
 vim.keymap.set("n", "<leader>pv", vim.cmd.Ex)
 
+-- enable line numbers in netrw, other settings are defaults
 vim.g.netrw_bufsettings = 'noma nomod nu nowrap ro nobl'
 
 vim.opt.number = true
