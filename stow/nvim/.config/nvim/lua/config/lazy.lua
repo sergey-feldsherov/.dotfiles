@@ -25,6 +25,8 @@ vim.keymap.set("n", "<leader>pv", vim.cmd.Ex)
 -- enable line numbers in netrw, other settings are defaults
 vim.g.netrw_bufsettings = 'noma nomod nu nowrap ro nobl'
 
+vim.g.tmux_navigator_disable_when_zoomed = 1
+
 vim.opt.number = true
 vim.opt.relativenumber = true
 
