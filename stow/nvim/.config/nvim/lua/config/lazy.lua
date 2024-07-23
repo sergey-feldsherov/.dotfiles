@@ -25,7 +25,11 @@ vim.keymap.set("n", "<leader>pv", vim.cmd.Ex)
 -- enable line numbers in netrw, other settings are defaults
 vim.g.netrw_bufsettings = 'noma nomod nu nowrap ro nobl'
 
-vim.g.tmux_navigator_disable_when_zoomed = 1
+-- disable netrw Ctrl+l keymap (refreshing directory)
+-- since it does not allow using tmux.nvim keymap to function
+-- correctly, map it to ctrl+e (like in :e (edit) which does
+-- the same for netrw buffers anyways
+vim.keymap.set("n", "<c-e>", "<Plug>NetrwRefresh")
 
 vim.opt.number = true
 vim.opt.relativenumber = true
