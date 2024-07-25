@@ -1,5 +1,2 @@
-[user]
-	email = imnosuperman74@gmail.com
-	name = sergey-feldsherov
-[credential]
-	helper = cache --timeout=3600
+[core]
+	editor = nvim
