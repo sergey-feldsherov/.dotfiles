@@ -28,7 +28,8 @@ On a fresh system, after cloning TPM repo, hit `C-a I` to install all plugins.
 ### TODO
 
 - add all shortcuts here
-- try to map Ctrl on capslock
-- try `C-s` as leader key binding
-- enable mouse?
+- kanata
+    - make it a systemd service
+    - figure out how to hot reload config
+
 
