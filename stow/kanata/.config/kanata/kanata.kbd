@@ -7,7 +7,7 @@
 ;; tap timeout; hold timeout (in milliseconds); tap action; hold action
 ;; if a press of a key happens before hold timeout expires, hold action is triggered anyways
 (defalias
-  escctrl (tap-hold-press 150 150 esc lctrl)
+  escctrl (tap-hold-press 100 150 esc lctrl)
 )
 
 (deflayer base
