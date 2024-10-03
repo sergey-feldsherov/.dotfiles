@@ -27,9 +27,9 @@ vim.g.netrw_bufsettings = 'noma nomod nu nowrap ro nobl'
 
 -- disable netrw Ctrl+l keymap (refreshing directory)
 -- since it does not allow using tmux.nvim keymap to function
--- correctly, map it to ctrl+e (like in :e (edit) which does
--- the same for netrw buffers anyways
-vim.keymap.set("n", "<c-e>", "<Plug>NetrwRefresh")
+-- correctly, map it to ctrl+W
+-- not ctrl+e because it is used in normal mode to scroll down by 1 line
+vim.keymap.set("n", "<C-W>", "<Plug>NetrwRefresh")
 
 vim.opt.number = true
 vim.opt.relativenumber = true
