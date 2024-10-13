@@ -9,6 +9,7 @@ Stowed:
 * tmux
 * guake
 * htop (for fun)
+* kanata
 
 Not synced:
 * dunno
@@ -25,11 +26,16 @@ some other things are reconfigured manually.
 
 On a fresh system, after cloning TPM repo, hit `C-a I` to install all plugins.
 
+## kanata
+
+### systemd unit
+Config is a mish-mash of stuff at github issue #130 on
+https://github.com/jtroo/kanata.
+
+### kanata.kbd
+
+there's stuff.
+
 ### TODO
 
 - add all shortcuts here
-- kanata
-    - make it a systemd service
-    - figure out how to hot reload config
-
-
