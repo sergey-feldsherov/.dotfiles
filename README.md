@@ -19,6 +19,13 @@ Not synced:
 - add all shortcuts stowed here (probably)
 - maybe reorganize and move specific details to a separate readme in plugin's directory
 
+## how to symlink
+
+Replace `module` with required package name, remove `n` to actually do the thing.
+```bash
+user@host:~/.dotfiles/stow$ stow -nvt ~ module
+```
+
 ## tmux
 
 Plugins are installed via [tpm](https://github.com/tmux-plugins/tpm),
@@ -35,7 +42,3 @@ https://github.com/jtroo/kanata.
 ### kanata.kbd
 
 there's stuff.
-
-### TODO
-
-- add all shortcuts here
