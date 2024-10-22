@@ -3,10 +3,10 @@ Description=Kanata Service
 Documentation=https://github.com/jtroo/kanata
 
 [Service]
+#ExecStartPre=/sbin/modprobe uinput
 Type=simple
-ExecStartPre=/usr/bin/modprobe uinput
 ExecStart=/usr/bin/kanata
 Restart=no
 
 [Install]
-WantedBy=default.target
+WantedBy=sysinit.target
