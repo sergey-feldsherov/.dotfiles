@@ -1,2 +1,5 @@
 [core]
 	editor = nvim
+[user]
+	email = imnosuperman74@gmail.com
+	name = Sergey Feldsherov
