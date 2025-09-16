@@ -1,0 +1,7 @@
+set kpxc_database_path $::env(HOME)/passwords/main.kdbx
+set kpxc_menu {dmenu -i}
+set kpxc_pinentry /usr/bin/pinentry-qt
+set kpx_dotool {xdotool -}
+set kpx_dotool_prefix "type "
+set kpx_notify "notify-send -u low \"Password inserted\" -t 1000"
+set kpxc_timeout 10
