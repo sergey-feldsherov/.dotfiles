@@ -19,6 +19,22 @@ Not synced:
 - add all shortcuts stowed here (probably)
 - maybe reorganize and move specific details to a separate readme in plugin's directory
 
+### neovim
+
+- fix treesitter
+- add all dependencies (like ripgrep)
+- study vim motions better
+- study telescope pickers
+- setup more stuff
+  - harpoon
+  - tmux+ssh plugins
+  - try neotree
+  - try expressline
+  - dial.nvim
+- study how to use vim command line
+- study how to use vim quickfixlist
+- study how to juggle vim buffers
+
 ## how to symlink
 
 Replace `module` with required package name, remove `n` to actually do the thing.

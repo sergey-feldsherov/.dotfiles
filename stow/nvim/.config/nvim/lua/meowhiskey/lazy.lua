@@ -20,38 +20,12 @@ vim.opt.rtp:prepend(lazypath)
 -- This is also a good place to setup other settings (vim.opt)
 vim.g.mapleader = " "
 vim.g.maplocalleader = "\\"
-vim.keymap.set("n", "<leader>pv", vim.cmd.Ex)
-
--- enable line numbers in netrw, other settings are defaults
-vim.g.netrw_bufsettings = 'noma nomod nu nowrap ro nobl'
-
--- disable netrw Ctrl+l keymap (refreshing directory)
--- since it does not allow using tmux.nvim keymap to function
--- correctly, map it to ctrl+W
--- not ctrl+e because it is used in normal mode to scroll down by 1 line
-vim.keymap.set("n", "<C-W>", "<Plug>NetrwRefresh")
-
-vim.opt.number = true
-vim.opt.relativenumber = true
-
-vim.opt.wrap = false
-
-vim.opt.hlsearch = false
-vim.opt.incsearch = true
-vim.opt.termguicolors = true
-vim.opt.cursorline = true
-
-vim.opt.shiftwidth = 4
-vim.opt.smarttab = true
-vim.opt.expandtab = true
-vim.opt.tabstop = 8
-vim.opt.softtabstop = 0
 
 -- Setup lazy.nvim
 require("lazy").setup({
   spec = {
     -- import your plugins
-    { import = "plugins" },
+    { import = "meowhiskey.plugins" },
   },
   -- Configure any other settings here. See the documentation for more details.
   -- colorscheme that will be used when installing plugins.
@@ -59,10 +33,3 @@ require("lazy").setup({
   -- automatically check for plugin updates
   checker = { enabled = true },
 })
-
-local builtin = require("telescope.builtin")
-vim.keymap.set('n', '<leader>ff', builtin.find_files, {})
-vim.keymap.set('n', '<leader>fg', builtin.live_grep, {})
-vim.keymap.set('n', '<leader>fb', builtin.buffers, {})
-vim.keymap.set('n', '<leader>fh', builtin.help_tags, {})
-
