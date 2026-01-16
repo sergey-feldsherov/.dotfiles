@@ -21,19 +21,26 @@ Not synced:
 
 ### neovim
 
-- fix treesitter
-- add all dependencies (like ripgrep)
-- study vim motions better
-- study telescope pickers
-- setup more stuff
-  - harpoon
-  - tmux+ssh plugins
-  - try neotree
-  - try expressline
-  - dial.nvim
-- study how to use vim command line
-- study how to use vim quickfixlist
-- study how to juggle vim buffers
+#### requirements
+
+- rg
+- lua-language-server
+- clangd
+- tree-sitter-cli
+
+#### bindings
+
+- `<c-w d>` LSP diagnostics
+- `<K>` hover
+- `<leader>o` update + source
+- `<leader>w` write
+- `<leader>q` quit
+- `<leader>e` Ex
+- `<leader>y` yank to system clipboard
+- `<leader>d` delete to system clipboard
+- `<leader>ff` find files by name
+- `<leader>fg` grep live
+- `<leader>lf` language format
 
 ## how to symlink
 
@@ -46,6 +53,8 @@ user@host:~/.dotfiles/stow$ stow -nvt ~ module
 
 Plugins are installed via [tpm](https://github.com/tmux-plugins/tpm),
 some other things are reconfigured manually.
+
+Use the script `install-tpm.sh` to do it in one command.
 
 On a fresh system, after cloning TPM repo, hit `C-a I` to install all plugins.
 
