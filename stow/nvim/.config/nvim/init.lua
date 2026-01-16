@@ -9,6 +9,8 @@ vim.o.signcolumn = "yes"
 vim.o.winborder = "rounded"
 vim.o.cursorline = true
 
+vim.g.netrw_bufsettings = 'noma nomod nu nowrap ro nobl'
+
 vim.keymap.set('n', '<leader>o', ':update<CR> :source<CR>')
 vim.keymap.set('n', '<leader>w', ':write<CR>')
 vim.keymap.set('n', '<leader>q', ':quit<CR>')
@@ -24,7 +26,8 @@ vim.pack.add({
 	{
 		src = "https://github.com/nvim-treesitter/nvim-treesitter",
 		build = ":TSUpdate"
-	}
+	},
+	{ src = "https://github.com/aserowy/tmux.nvim" }
 })
 
 vim.api.nvim_create_autocmd('LspAttach', {
@@ -61,3 +64,7 @@ vim.lsp.config("lua_ls", {
 vim.keymap.set('n', '<leader>lf', vim.lsp.buf.format)
 
 vim.cmd("colorscheme tokyonight-moon")
+
+require("tmux").setup()
+vim.g.tmux_navigator_disable_when_zoomed = 1
+vim.keymap.set('n', '<c-e>', "<Plub>NetrwRefresh")
